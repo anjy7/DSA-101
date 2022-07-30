@@ -1,29 +1,26 @@
 class Solution {
-    public int numLength(int num){
-        int count = 0;
-        while(num > 0){
-            num=num/10;
-            count++;
-        }
-        return count;
-    }
-    public int reverse(int num,int length) {
-        int n = 0;
-        int m = 0;
-        while (length > 0) {
-            n = num % 10;
-            num = num / 10;
-            m = m * 10 + n;
-            length--;
-
-            }
-        return m;
-        }
     public boolean isPalindrome(int x) {
-        int length = numLength(x);
-        int ans = reverse(x,length);
-        return x == ans;
+         if (x<0){
+            return false;
+        }
+        
+        int count = 0;
+        int temp = x;
+        int n=0, m = 0;
+        
+       
+        
+        while (temp !=0) {
+            n = temp % 10;
+            temp = temp /10;
+            m = m * 10 + n;
+        }
+        
+        if(x == m){
+            return true;
+        }else{
+            return false;
+        }
         
     }
-
-    }
+}
