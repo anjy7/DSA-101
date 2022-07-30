@@ -12,8 +12,12 @@ class Solution {
             temp = temp /10;
             m = m * 10 + n;
         }
-    
-        return x==m;
+        
+        if(x == m){
+            return true;
+        }else{
+            return false;
+        }
         
     }
 }
